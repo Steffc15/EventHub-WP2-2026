@@ -56,4 +56,4 @@ Administrators manage the content and users of the platform. They can:
 The wireframe for the EventHub web application was created using Figma.
 It represents the main structure and layout of the application, including the Home page, Events page, Reservations page, and Login/Sign Up page.
 
-Figma link: https://www.figma.com/design/BP09kXEVQW0fuOwrV5aeUv/Untitled?node-id=0-1&t=mxqKOtzlJkvGf4Yi-1
+Figma link: https://www.figma.com/design/BP09kXEVQW0fuOwrV5aeUv/Untitled?node-id=0-1&t=ANBw7DrZnfbNdCyR-1
