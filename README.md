@@ -50,3 +50,10 @@ Administrators manage the content and users of the platform. They can:
 * **As a client**, I want to browse available events and reserve seats so that I can attend events that interest me.
 
 * **As an admin**, I want to add, edit, and manage events so that users can view and reserve places for upcoming events.
+
+## Wireframe (Figma)
+
+The wireframe for the EventHub web application was created using Figma.
+It represents the main structure and layout of the application, including the Home page, Events page, Reservations page, and Login/Sign Up page.
+
+Figma link: https://www.figma.com/design/BP09kXEVQW0fuOwrV5aeUv/Untitled?node-id=0-1&t=mxqKOtzlJkvGf4Yi-1
