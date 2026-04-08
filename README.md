@@ -57,3 +57,5 @@ The wireframe for the EventHub web application was created using Figma.
 It represents the main structure and layout of the application, including the Home page, Events page, Reservations page, and Login/Sign Up page.
 
 Figma link: https://www.figma.com/design/BP09kXEVQW0fuOwrV5aeUv/Untitled?node-id=0-1&t=ANBw7DrZnfbNdCyR-1
+
+Trello board link: https://trello.com/b/hqNLF6d6/eventhub-project-board
