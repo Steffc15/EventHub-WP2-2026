@@ -1,0 +1,42 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--gray-page);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --rose-100: #f1d2d3;
+  /* Used for: Login Card Background */
+  --rose-300: #df9a9d;
+  /* Used for: Header and Footer */
+  --gray-page: #efefef;
+  /* Used for: Main Page Background */
+  --text: #181818;
+  /* Used for: All Headings/Labels */
+  --btn-dark: #605c5c;
+  /* Used for: The Login Button */
+}
