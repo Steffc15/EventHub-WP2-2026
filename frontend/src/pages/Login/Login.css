@@ -1,40 +1,32 @@
 .auth-container {
-  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--gray-page);
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
 .auth-card {
   background-color: var(--rose-100);
-  padding: 30px 40px;
-  /*Reduced top/bottom padding to save space */
+  padding: 40px 45px;
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
   text-align: center;
   border-radius: 18px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  overflow: visible;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
-
-/*Make the title slightly smaller if it's pushing things down */
 
 .auth-card h2 {
   font-size: 2rem;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
-
-/* Subtitle */
 
 .auth-card p {
   font-size: 0.95rem;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   color: var(--text);
 }
-
-/* Form layout */
 
 .auth-form {
   display: flex;
@@ -42,13 +34,9 @@
   gap: 18px;
 }
 
-/* Input group */
-
 .form-group {
   text-align: left;
 }
-
-/* Labels */
 
 .form-group label {
   display: block;
@@ -57,43 +45,34 @@
   color: var(--text);
 }
 
-/* Inputs */
-
 .form-group input {
   width: 100%;
   padding: 12px 14px;
   border: none;
-  background-color: #ffffff;
+  background-color: #fff;
   font-size: 1rem;
-  outline: none;
-  font-family: inherit;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+  outline: none;
 }
 
 .form-group input:focus {
   box-shadow: 0 0 0 2px var(--rose-300);
 }
 
-/* Submit button */
-
 .auth-submit {
   margin-top: 20px;
   background-color: var(--btn-dark);
-  color: #ffffff;
+  color: #fff;
   border: none;
   padding: 14px;
   width: 100%;
   cursor: pointer;
   font-size: 1rem;
-  font-weight: 500;
   border-radius: 10px;
-  transition: all 0.25s ease;
 }
 
 .auth-submit:hover {
   background-color: #4a4747;
-  transform: translateY(-1px);
 }
 
 .auth-toggle {
@@ -105,13 +84,4 @@
 
 .auth-toggle:hover {
   text-decoration: underline;
-}
-
-@media (max-width: 500px) {
-  .auth-card {
-    padding: 35px 25px;
-  }
-  .auth-card h2 {
-    font-size: 1.8rem;
-  }
 }
