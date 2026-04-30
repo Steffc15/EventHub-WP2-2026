@@ -1,59 +1,99 @@
 .res-page {
+  min-height: calc(100vh - 180px);
+  background: #eeeeee;
   display: flex;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 90px 24px;
 }
 
 .res-container {
   width: 100%;
-  max-width: 900px;
+  max-width: 1100px;
 }
 
 .res-text {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 46px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 18px;
+  color: #111;
 }
 
 .text1 {
-  margin-bottom: 25px;
+  text-align: center;
+  margin-bottom: 70px;
   color: #555;
+  font-size: 22px;
 }
 
 .empty-state {
   text-align: center;
   padding: 50px;
-  font-size: 1.2rem;
+  font-size: 26px;
   color: #777;
 }
 
 .res-list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 24px;
 }
 
 .res-card {
   display: flex;
   align-items: center;
-  gap: 15px;
-  background: white;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  gap: 28px;
+  background: #fff;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
 }
 
 .res-card img {
-  width: 100px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 10px;
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+
+.res-info {
+  flex: 1;
 }
 
 .res-info h3 {
-  margin: 0;
+  margin: 0 0 14px;
+  font-size: 26px;
 }
 
 .res-info p {
-  margin: 5px 0 0;
-  color: #666;
+  margin: 8px 0;
+  color: #444;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.cancel-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 13px 22px;
+  background: #625d5d;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background: #514c4c;
+}
+
+@media (max-width: 800px) {
+  .res-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cancel-btn {
+    width: 100%;
+  }
 }
