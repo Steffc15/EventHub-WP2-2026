@@ -39,6 +39,9 @@ public class ReservationController {
             return ResponseEntity.badRequest().body("Event not found");
         }
 
+        if (reservationRepository.existsByUserIdAndEventId(request.userId, request.eventId)) {
+            return ResponseEntity.badRequest().body("You already booked this event");
+        }
         int requestedSeats = request.seats == null ? 1 : request.seats;
 
         if (event.getAvailableSeats() < requestedSeats) {

@@ -1,0 +1,33 @@
+.terms-page {
+  min-height: calc(100vh - 180px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: #eeeeee;
+}
+
+.terms-card {
+  max-width: 850px;
+  width: 100%;
+
+  background: #efd0d2;
+  padding: 50px;
+  border-radius: 28px;
+
+  text-align: center;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.terms-card h1 {
+  font-size: 58px;
+  margin-bottom: 30px;
+}
+
+.terms-card p {
+  font-size: 23px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #333;
+}

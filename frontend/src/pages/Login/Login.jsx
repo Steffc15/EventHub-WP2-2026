@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
-
+import { toast } from 'react-toastify';
 const Login = () => {
   const navigate = useNavigate();
 
@@ -23,15 +23,15 @@ const Login = () => {
       const data = await response.json();
 
       if (response.ok) {
-        alert('Login reușit!');
+        toast.success('Login reușit!');
         localStorage.setItem('user', JSON.stringify(data));
         navigate('/');
       } else {
-        alert(data);
+        toast.error(data);
       }
     } catch (error) {
       console.error(error);
-      alert('Eroare la server!');
+      toast.error('Eroare la server!');
     }
   };
 

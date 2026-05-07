@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import './Events.css';
-
+import { toast } from 'react-toastify';
 const formatDate = (dateString) => {
   if (!dateString) return '';
 
@@ -92,7 +92,7 @@ const Events = () => {
     const user = JSON.parse(localStorage.getItem('user'));
 
     if (!user || !user.id) {
-      alert('Trebuie să fii logat pentru a face o rezervare.');
+      toast.warning('You must be logged in.');
       return;
     }
 
@@ -112,7 +112,7 @@ const Events = () => {
       const text = await response.text();
 
       if (!response.ok) {
-        alert(text);
+        toast.error(text);
         return;
       }
 
@@ -124,10 +124,10 @@ const Events = () => {
         )
       );
 
-      alert('Rezervare făcută cu succes!');
+      toast.success('Reservation created successfully!');
     } catch (error) {
       console.error('Book now error:', error);
-      alert('Nu se poate conecta la backend. Verifică consola și terminalul Spring.');
+      toast.error('Cannot connect to backend.');
     }
   };
 

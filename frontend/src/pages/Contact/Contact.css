@@ -1,0 +1,40 @@
+.contact-page {
+  min-height: calc(100vh - 180px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: #eeeeee;
+}
+
+.contact-card {
+  max-width: 750px;
+  width: 100%;
+
+  background: #efd0d2;
+  padding: 50px;
+  border-radius: 28px;
+
+  text-align: center;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card h1 {
+  font-size: 58px;
+  margin-bottom: 25px;
+}
+
+.contact-card p {
+  font-size: 23px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.contact-info {
+  margin-top: 35px;
+}
+
+.contact-info p {
+  margin-bottom: 18px;
+}

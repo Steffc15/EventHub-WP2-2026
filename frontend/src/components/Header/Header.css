@@ -1,37 +1,90 @@
 .site-header {
-    background-color: var(--rose-300);
-    height: 80px;
-    display: flex;
-    align-items: center;
-    width: 100%;
+  width: 100%;
+  background: #d89a9d;
+  padding: 22px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .nav-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 50px;
+  width: 92%;
+  max-width: 1500px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--text);
+  font-size: 52px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #111;
 }
 
 .main-nav {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.main-nav a {
-    text-decoration: none;
-    color: var(--text);
-    font-size: 1.1rem;
-    transition: opacity 0.2s;
+/* toate butoanele/linkurile */
+
+.main-nav a,
+.logout-btn {
+  text-decoration: none;
+  color: #111;
+
+  font-size: 24px;
+  font-weight: 600;
+  font-family: inherit;
+
+  padding: 12px 22px;
+  border-radius: 14px;
+
+  transition: all 0.25s ease;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 
-.main-nav a:hover {
-    opacity: 0.7;
+/* hover frumos */
+
+.main-nav a:hover,
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+/* buton activ */
+
+.main-nav a:active,
+.logout-btn:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 900px) {
+  .nav-wrap {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo {
+    font-size: 40px;
+  }
+
+  .main-nav a,
+  .logout-btn {
+    font-size: 20px;
+  }
 }

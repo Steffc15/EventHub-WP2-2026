@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Reservations.css';
-
+import { toast } from 'react-toastify';
 const formatDate = (dateString) => {
   if (!dateString) return '';
 
@@ -64,10 +64,10 @@ const Reservations = () => {
         prev.filter((reservation) => reservation.id !== reservationId)
       );
 
-      alert('Rezervarea a fost anulată.');
+      toast.success('Reservation cancelled successfully!');
     } catch (error) {
       console.error(error);
-      alert('Eroare la server.');
+      toast.error('Server error.');
     }
   };
 

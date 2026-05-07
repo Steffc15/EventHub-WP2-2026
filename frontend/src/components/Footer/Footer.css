@@ -35,3 +35,32 @@
 .footer-links span {
   color: var(--text);
 }
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #111;
+
+  font-size: 24px;
+  font-weight: 600;
+  font-family: inherit;
+
+  padding: 12px 22px;
+  border-radius: 14px;
+
+  transition: all 0.25s ease;
+}
+
+.footer-links a:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+.footer-links a:active {
+  transform: scale(0.97);
+}
