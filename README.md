@@ -16,7 +16,7 @@ The following technologies will be used to develop the application:
 
 * **Spring Boot** – backend framework used to build the REST API and business logic
 * **Spring Security** – used for authentication, authorization, and password encryption
-* **MySQL / PostgreSQL** – relational database used to store users, events, and reservations
+* **PostgreSQL** – relational database used to store users, events, and reservations
 * **Bootstrap** – frontend framework used to build a responsive user interface
 * **Docker** – used to containerize and deploy the entire application
 
