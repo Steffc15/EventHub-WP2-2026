@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Signup.css';
-
+import { toast } from 'react-toastify';
 const Signup = () => {
   const navigate = useNavigate();
 
@@ -24,14 +24,14 @@ const Signup = () => {
       const data = await response.json();
 
       if (response.ok) {
-        alert('Cont creat cu succes!');
+        toast.success('Cont creat cu succes!');
         navigate('/login');
       } else {
-        alert(data);
+        toast.error(data);
       }
     } catch (error) {
       console.error(error);
-      alert('Eroare la server!');
+      toast.error('Eroare la server!');
     }
   };
 

@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:16
+    container_name: eventhub-db
+    environment:
+      POSTGRES_DB: eventhub
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - eventhub_data:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    container_name: eventhub-backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/eventhub
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+
+  frontend:
+    build: ./frontend
+    container_name: eventhub-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  eventhub_data:
