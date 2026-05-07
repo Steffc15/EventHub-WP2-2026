@@ -28,6 +28,7 @@ const Header = () => {
             <>
               <Link to="/events">Events</Link>
               <Link to="/reservations">Reservations</Link>
+              <Link to="/admin/events">Admin</Link>
             </>
           )}
 
