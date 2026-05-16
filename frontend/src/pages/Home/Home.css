@@ -1,56 +1,70 @@
 .home-container {
-  height: 100%;
   width: 100%;
+  padding: 60px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--gray-page);
 }
 
 .home-card {
   background-color: var(--rose-100);
-  padding: 40px;
+  padding: 60px 50px;
   width: 100%;
-  max-width: 600px;
+  max-width: 650px;
   text-align: center;
-  border-radius: 18px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(229, 167, 169, 0.2);
 }
 
 .home-card h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: var(--text-main);
+  letter-spacing: -1px;
+  line-height: 1.2;
 }
 
 .home-card p {
-  font-size: 1rem;
-  margin-bottom: 30px;
-  color: var(--text);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  color: var(--text-muted);
 }
-
-/* Button */
 
 .home-btn {
   background-color: var(--btn-dark);
   color: #fff;
   border: none;
-  padding: 14px 28px;
+  padding: 16px 36px;
   font-size: 1rem;
-  border-radius: 25px;
+  font-weight: 600;
+  border-radius: 30px;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(58, 53, 53, 0.2);
 }
 
 .home-btn:hover {
-  background-color: #4a4747;
-  transform: translateY(-1px);
+  background-color: var(--btn-dark-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(58, 53, 53, 0.3);
 }
 
-@media (max-width: 500px) {
+.home-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
   .home-card {
-    padding: 30px 20px;
+    padding: 40px 24px;
   }
   .home-card h1 {
     font-size: 2rem;
+  }
+  .home-card p {
+    font-size: 1rem;
   }
 }

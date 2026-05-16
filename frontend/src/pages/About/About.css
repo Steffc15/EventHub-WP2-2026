@@ -1,29 +1,60 @@
-.about-page {
+.about-page,
+.contact-page,
+.terms-page {
   min-height: calc(100vh - 180px);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 60px 20px;
-  background: #eeeeee;
+  background: var(--gray-page);
+  width: 100%;
 }
 
-.about-card {
-  max-width: 850px;
-  background: #efd0d2;
-  padding: 50px;
-  border-radius: 28px;
+.about-card,
+.contact-card,
+.terms-card {
+  max-width: 700px;
+  width: 100%;
+  background: var(--rose-100);
+  padding: 50px 40px;
+  border-radius: var(--radius-lg);
   text-align: center;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(229, 167, 169, 0.2);
 }
 
-.about-card h1 {
-  font-size: 58px;
-  margin-bottom: 30px;
+.about-card h1,
+.contact-card h1,
+.terms-card h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
 }
 
-.about-card p {
-  font-size: 23px;
-  line-height: 1.8;
+.about-card p,
+.contact-card p,
+.terms-card p {
+  font-size: 16px;
+  line-height: 1.6;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--text-muted);
+}
+
+.contact-info {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  display: inline-block;
+  min-width: 280px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-weight: 600;
+  color: var(--text-main);
 }

@@ -1,59 +1,67 @@
 .res-page {
   min-height: calc(100vh - 180px);
-  background: #eeeeee;
+  background: var(--gray-page);
   display: flex;
   justify-content: center;
-  padding: 90px 24px;
+  padding: 60px 20px;
+  width: 100%;
 }
 
 .res-container {
   width: 100%;
-  max-width: 1100px;
+  max-width: 900px;
 }
 
 .res-text {
-  font-size: 46px;
+  font-size: 32px;
   font-weight: 800;
   text-align: center;
-  margin-bottom: 18px;
-  color: #111;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
 }
 
 .text1 {
   text-align: center;
-  margin-bottom: 70px;
-  color: #555;
-  font-size: 22px;
+  margin-bottom: 40px;
+  color: var(--text-muted);
+  font-size: 16px;
 }
 
 .empty-state {
   text-align: center;
-  padding: 50px;
-  font-size: 26px;
-  color: #777;
+  padding: 60px 20px;
+  font-size: 16px;
+  color: var(--text-muted);
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
 }
 
 .res-list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
 .res-card {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
   background: #fff;
-  padding: 28px;
-  border-radius: 20px;
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0, 0, 0, 0.02);
 }
 
 .res-card img {
-  width: 130px;
-  height: 130px;
-  object-fit: contain;
-  border-radius: 14px;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  background-color: var(--gray-page);
   flex-shrink: 0;
 }
 
@@ -62,38 +70,47 @@
 }
 
 .res-info h3 {
-  margin: 0 0 14px;
-  font-size: 26px;
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .res-info p {
-  margin: 8px 0;
-  color: #444;
-  font-size: 18px;
-  line-height: 1.4;
+  margin: 4px 0;
+  color: var(--text-muted);
+  font-size: 14px;
 }
 
 .cancel-btn {
   border: none;
-  border-radius: 12px;
-  padding: 13px 22px;
-  background: #625d5d;
-  color: white;
-  font-size: 17px;
+  border-radius: var(--radius-sm);
+  padding: 10px 18px;
+  background: #f4e8e8;
+  color: #b84a4a;
+  font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
+  transition: var(--transition);
 }
 
 .cancel-btn:hover {
-  background: #514c4c;
+  background: #b84a4a;
+  color: white;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .res-card {
     flex-direction: column;
-    align-items: flex-start;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .res-card img {
+    margin: 0 auto;
   }
 
   .cancel-btn {
     width: 100%;
+    margin-top: 10px;
   }
 }

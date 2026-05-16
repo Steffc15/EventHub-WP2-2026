@@ -1,90 +1,92 @@
 .site-header {
   width: 100%;
-  background: #d89a9d;
-  padding: 22px 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background: var(--rose-300);
+  padding: 16px 0;
+  box-shadow: var(--shadow-sm);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
 }
 
 .nav-wrap {
-  width: 92%;
-  max-width: 1500px;
+  width: 90%;
+  max-width: 1400px;
   margin: auto;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  font-size: 52px;
+  font-size: 28px;
   font-weight: 800;
   margin: 0;
+  letter-spacing: -0.5px;
 }
 
 .logo a {
   text-decoration: none;
-  color: #111;
+  color: var(--text-main);
+  transition: var(--transition);
+}
+
+.logo a:hover {
+  opacity: 0.8;
 }
 
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
 }
-
-/* toate butoanele/linkurile */
 
 .main-nav a,
 .logout-btn {
   text-decoration: none;
-  color: #111;
-
-  font-size: 24px;
+  color: var(--text-main);
+  font-size: 15px;
   font-weight: 600;
   font-family: inherit;
-
-  padding: 12px 22px;
-  border-radius: 14px;
-
-  transition: all 0.25s ease;
-
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
   border: none;
   background: transparent;
   cursor: pointer;
 }
 
-/* hover frumos */
-
 .main-nav a:hover,
 .logout-btn:hover {
-  background: rgba(255, 255, 255, 0.35);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.4);
+  color: var(--text-main);
 }
-
-/* buton activ */
 
 .main-nav a:active,
 .logout-btn:active {
-  transform: scale(0.97);
+  transform: scale(0.98);
 }
 
 @media (max-width: 900px) {
   .nav-wrap {
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
   }
 
   .main-nav {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 8px;
   }
 
   .logo {
-    font-size: 40px;
+    font-size: 24px;
   }
 
   .main-nav a,
   .logout-btn {
-    font-size: 20px;
+    font-size: 14px;
+    padding: 8px 14px;
   }
 }
