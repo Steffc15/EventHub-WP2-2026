@@ -41,7 +41,6 @@ Administrators manage the content and users of the platform. They can:
 * edit or delete existing events
 * upload event images
 * update the number of available seats for events
-* manage user accounts
 
 ## User Stories
 
