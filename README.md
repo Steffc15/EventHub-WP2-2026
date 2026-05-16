@@ -60,3 +60,7 @@ Figma link: https://www.figma.com/design/BP09kXEVQW0fuOwrV5aeUv/Untitled?node-id
 ## Trello Board
 
 Trello board link: https://trello.com/b/hqNLF6d6/eventhub-project-board
+
+## Project Video
+
+[Watch demo video] 
