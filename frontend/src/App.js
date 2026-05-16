@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -18,6 +18,18 @@ import AdminEvents from './pages/AdminEvents/AdminEvents';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+// 1. Am creat o mini-componentă de protecție care citește dinamica din localStorage la FIECARE accesare
+const ProtectedAdminRoute = ({ children }) => {
+  const storedUser = localStorage.getItem('user');
+  const user = storedUser ? JSON.parse(storedUser) : null;
+
+  if (user && user.email?.toLowerCase().trim() === 'admin@gmail.com') {
+    return children;
+  }
+  
+  return <Navigate to="/" replace />;
+};
+
 function App() {
   return (
     <div className="app-wrapper">
@@ -33,7 +45,16 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<Terms />} />
-          <Route path="/admin/events" element={<AdminEvents />} />
+          
+          {/* 2. Folosim componenta dinamică pentru ruta de admin */}
+          <Route 
+            path="/admin/events" 
+            element={
+              <ProtectedAdminRoute>
+                <AdminEvents />
+              </ProtectedAdminRoute>
+            } 
+          />
         </Routes>
       </main>
 

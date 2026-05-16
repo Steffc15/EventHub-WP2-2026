@@ -5,7 +5,8 @@ import './Header.css';
 const Header = () => {
   const navigate = useNavigate();
 
-  const user = JSON.parse(localStorage.getItem('user'));
+  const storedUser = localStorage.getItem('user'); 
+  const user = storedUser ? JSON.parse(storedUser) : null;
 
   const handleLogout = () => {
     localStorage.removeItem('user');
@@ -24,12 +25,17 @@ const Header = () => {
         <nav className="main-nav">
           <Link to="/">Home</Link>
 
+          
           {user && (
             <>
               <Link to="/events">Events</Link>
               <Link to="/reservations">Reservations</Link>
-              <Link to="/admin/events">Admin</Link>
             </>
+          )}
+
+          
+          {user && user.email === 'admin@gmail.com' && (
+            <Link to="/admin/events">Admin</Link>
           )}
 
           {!user ? (
